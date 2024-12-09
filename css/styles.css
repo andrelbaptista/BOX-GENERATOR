@@ -6,6 +6,7 @@
     --color3:#555;
     --color4: #d3d3d3;
     --color5: #e9d60a;
+    --color6: #dfdfdf;
 }
 
 /* estilos globais do projeto */
@@ -99,12 +100,22 @@ h2 {
 }
 
 .form-control input[type="text"] {
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     margin-left: 1rem;
     text-align: center;
 }
 
+#color-value {
+    min-width: 100px;
+}
+
+
+#inset {
+    align-self: start;
+    height: 20px;
+    width: 20px;
+}
 
 /* preview */
 #box {
@@ -128,4 +139,34 @@ h2 {
     margin: 0 auto;
     border: 2px solid var(--color5);
     padding: 1rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+#code-area:hover {
+    background-color: var(--color6);
+}
+
+#code-copy{
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* responsividade */
+@media (max-width: 425px) {
+    #box-shadow-generator {
+        flex-direction: column;
+    }
+    #controls-container,
+    #preview {
+        padding: 1rem 2rem;
+    }
+    #box  {
+        width: 60%;
+        height: 200px;
+        margin: 0 auto;
+    }
+    #generated-code {
+        margin-top: 3rem;
+    }
 }
