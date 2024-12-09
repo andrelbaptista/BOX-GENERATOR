@@ -1,0 +1,131 @@
+/* estilos do projeto para fácil manutenção */
+:root {
+    --font: Verdana, Geneva, Tahoma, sans-serif;
+    --color1: #333;
+    --color2: #ccc;
+    --color3:#555;
+    --color4: #d3d3d3;
+    --color5: #e9d60a;
+}
+
+/* estilos globais do projeto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+/* regra para gerar espaçamento abaixo na tela e permitir o scroll */
+body {
+    margin-bottom: 500px;
+}
+
+
+/* estilo dos h2 */
+h2 {
+    margin-bottom: 1.6rem;
+    text-align: center;
+    color: var(--color1);
+}
+
+/* definição box da tela, flex, largura max e centralização*/
+#box-shadow-generator {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* definição do box dos controles e do preview, flex de 1 faz com que os elementos ocupem o máximo de espaço */
+#controls-container,
+#preview {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* formatação dos controle, o padding e bottom iguais faz com que os elementes dividam os espaços equinanemente */
+.form-control {
+    display: flex;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px dashed var(--color2);
+}
+
+/* formatação do título do controle */
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color3);
+}
+
+/* formatando o range, flex 1 pra ocupar o máximo do espaço disponível */
+.range-input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* tirando os estilos padrão do type range */
+.range-input input[type="range"] {
+    /* usado para navegadores antigos */
+    -webkit-appearance: none;
+    /* navegadores novos */
+    appearance: none;
+    width: 100%;
+    height: 24px;
+    background-color: var(--color4);
+    outline: none;
+}
+
+
+/* limpa todos os estilos do tipo range e aplica os novos estilos*/
+.range-input input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: var(--color5);
+    cursor: pointer;
+}
+
+/* ajusta o campo de px */
+.reference-input {
+    display: flex;
+    align-items: center;
+}
+
+.reference-input p {
+    margin-left: 4px;
+}
+
+.form-control input[type="text"] {
+    height: 30px;
+    width: 30px;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+
+/* preview */
+#box {
+    width: 100%;
+    height: 300px;
+    background-color: var(--color5);
+}
+
+/* geração do código */
+#generated-code {
+    text-align: center;
+}
+
+#generated-code p {
+    margin-bottom: .5rem;
+}
+
+#code-area {
+    background-color: var(--color4);
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid var(--color5);
+    padding: 1rem;
+}
