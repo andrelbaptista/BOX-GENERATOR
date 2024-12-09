@@ -85,6 +85,48 @@
             <p>px</p>
           </div>
         </div>
+        <div class="form-control">
+          <div class="range-input">
+            <label for="color">Cor da sombra:</label>
+            <input
+              type="color"
+              name="color"
+              id="color"
+              value="#000000"
+            />
+          </div>
+          <div class="reference-input">
+            <input type="text" name="color-value" id="color-value" />
+          </div>
+        </div>
+        <div class="form-control">
+          <div class="range-input">
+            <label for="opacity">Opacidade:</label>
+            <input
+              type="range"
+              name="opacity"
+              id="opacity"
+              min="0"
+              max="1"
+              value="1"
+              step="0.01"
+            />
+          </div>
+          <div class="reference-input">
+            <input type="text" name="opacity-value" id="opacity-value" />
+            <p>px</p>
+          </div>
+        </div>
+        <div class="form-control">
+          <div class="range-input">
+            <label for="opacity">Sombra interna? (Inset):</label>
+            <input
+              type="checkbox"
+              name="inset"
+              id="inset"
+            />
+          </div>
+        </div>
       </div>
       <!-- aqui se cria a div do preview -->
       <div id="preview">
